@@ -1,0 +1,54 @@
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import Button from '@/components/Button';
+import MapView from 'react-native-maps';
+
+export default function AboutScreen() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.heading}>🚨 Emergency Panel</Text>
+      <Text style={styles.subheading}>Access quick actions for safety</Text>
+
+      <ScrollView contentContainerStyle={styles.footerContainer}>
+        <Button label="📍 SEE MAP" />
+        <View style={styles.container}>
+      <MapView style={styles.map} />
+    </View>
+        <Button label="🧭 PLAN ROUTE" />
+        <Button label="🚨 EMERGENCY" />
+        <Button label="📢 REPORT INCIDENTS" />
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0f2027', // Deep background
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 80,
+  },
+  heading: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#00c9ff',
+    textShadowColor: '#0077b6',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 6,
+    marginBottom: 10,
+  },
+  subheading: {
+    fontSize: 16,
+    color: '#cfd8dc',
+    marginBottom: 30,
+  },
+  footerContainer: {
+    alignItems: 'center',
+    gap: 20,
+  },
+  map: {
+    width: '100%',
+    height: '100%',
+  },
+});
