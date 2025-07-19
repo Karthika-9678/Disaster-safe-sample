@@ -1,8 +1,10 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { useRouter } from 'expo-router';
 import Button from '@/components/Button';
 import MapView from 'react-native-maps';
 
 export default function AboutScreen() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>🚨 Emergency Panel</Text>
@@ -13,7 +15,7 @@ export default function AboutScreen() {
         <View style={styles.container}>
       <MapView style={styles.map} />
     </View>
-        <Button label="🧭 PLAN ROUTE" />
+        <Button label="🧭 PLAN ROUTE" onPress={() => router.push('/route')} />
         <Button label="🚨 EMERGENCY" />
         <Button label="📢 REPORT INCIDENTS" />
       </ScrollView>

@@ -1,10 +1,11 @@
-import { StyleSheet, View, Pressable, Text, LinearGradient } from 'react-native';
+import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from 'react-native';
 
 type Props = {
   label: string;
+  onPress?: (event: GestureResponderEvent) => void;
 };
 
-export default function Button({ label }: Props) {
+export default function Button({ label, onPress }: Props) {
   return (
     <View style={styles.buttonContainer}>
       <Pressable
@@ -12,7 +13,7 @@ export default function Button({ label }: Props) {
           styles.button,
           { backgroundColor: pressed ? '#0077b6' : '#00c9ff' },
         ]}
-        onPress={() => alert(`You pressed "${label}"`)}
+        onPress={onPress}
       >
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
