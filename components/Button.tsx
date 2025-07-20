@@ -1,11 +1,13 @@
-import { StyleSheet, View, Pressable, Text, LinearGradient } from 'react-native';
+import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from 'react-native';
 
 type Props = {
   label: string;
-  onPress?: () => void;
+
+  onPress?: (event: GestureResponderEvent) => void;
 };
 
-export default function Button({ label,onPress }: Props) {
+export default function Button({ label, onPress }: Props) {
+
   return (
     <View style={styles.buttonContainer}>
       <Pressable
