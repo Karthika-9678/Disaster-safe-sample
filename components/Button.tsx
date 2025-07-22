@@ -2,10 +2,12 @@ import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from 'react-
 
 type Props = {
   label: string;
+
   onPress?: (event: GestureResponderEvent) => void;
 };
 
 export default function Button({ label, onPress }: Props) {
+
   return (
     <View style={styles.buttonContainer}>
       <Pressable
