@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import Button from '@/components/Button';
-import { useRouter } from 'expo-router';
+import MapView from 'react-native-maps';
 
 export default function AboutScreen() {
 
@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 80,
+  },
+  map: {
+    width: '100%',
+    height: 300,
   },
   heading: {
     fontSize: 32,
