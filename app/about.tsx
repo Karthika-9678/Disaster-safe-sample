@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import Button from '@/components/Button';
-import { useRouter } from 'expo-router';
+import MapView from 'react-native-maps';
 
 export default function AboutScreen() {
 
@@ -13,13 +13,8 @@ export default function AboutScreen() {
       <Text style={styles.subheading}>Access quick actions for safety</Text>
 
       <ScrollView contentContainerStyle={styles.footerContainer}>
-        <Button label="📍 SEE MAP" />
-
-        <View style={styles.container}>
-      <MapView style={styles.map} />
-    </View>
+        <Button label="📍 SEE MAP" onPress={() => router.push('/mapview')}/>
         <Button label="🧭 PLAN ROUTE" onPress={() => router.push('/route')} />
-
         <Button label="🚨 EMERGENCY" />
         <Button label="📢 REPORT INCIDENTS" onPress={()=>router.push('/view_report')}/>
       </ScrollView>
@@ -34,6 +29,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 80,
+  },
+  map: {
+    width: '100%',
+    height: 300,
   },
   heading: {
     fontSize: 32,
@@ -52,5 +51,5 @@ const styles = StyleSheet.create({
   footerContainer: {
     alignItems: 'center',
     gap: 20,
-  },
+  }
 });

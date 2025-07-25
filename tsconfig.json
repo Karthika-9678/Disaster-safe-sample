@@ -11,8 +11,10 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "polyline.d.ts",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "env.d.ts"
+    "env.d.ts",
+    "app"
   ]
 }

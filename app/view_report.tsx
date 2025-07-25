@@ -1,5 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
+import { router,useRouter } from 'expo-router';
 import { blue } from 'react-native-reanimated/lib/typescript/Colors';
 
 export default function ViewReportScreen() {
