@@ -13,12 +13,8 @@
   "dependencies": {
     "@expo/ngrok": "^4.1.0",
     "@expo/vector-icons": "^14.1.0",
-<<<<<<< HEAD
-    "@react-native-community/datetimepicker": "^8.4.1",
-=======
     "@mapbox/polyline": "^1.2.1",
     "@react-native-community/datetimepicker": "8.4.1",
->>>>>>> feature/route-planner
     "@react-native-picker/picker": "2.11.1",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
